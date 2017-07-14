@@ -165,7 +165,7 @@ namespace Umbraco.Web.Models.Mapping
             var listViewTab = new Tab<ContentPropertyDisplay>();
             listViewTab.Alias = Constants.Conventions.PropertyGroups.ListViewGroupName;
             listViewTab.Label = localizedTextService.Localize("content/childItems");
-            listViewTab.Id = 25;
+            listViewTab.Id = display.Tabs.Count() + 25;
             listViewTab.IsActive = true;
 
             var listViewConfig = editor.PreValueEditor.ConvertDbToEditor(editor.DefaultPreValues, preVals);
